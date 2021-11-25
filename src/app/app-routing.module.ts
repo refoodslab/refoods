@@ -9,6 +9,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/admin.module').then((m) => m.AdminModule),
   },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
